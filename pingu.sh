@@ -36,7 +36,7 @@ PINGU[19]=" .`B``B``B``B``B``B``B``B``B``B``B``B``B``B``B``B``Y``W``W``W``W``W``
 #printf "Debug:\n%s\n"  "${PINGU[@]}"
 
 COUNT=-1
-ping google.com -c 20 | while read LINE; do
+ping $1 -c 20 | while read LINE; do
 	if [ $COUNT -ge 0 ];then
 		if [ $? -eq 0 ];then
 			echo "${PINGU[$COUNT]}$LINE"
